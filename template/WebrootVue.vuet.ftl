@@ -223,13 +223,6 @@
                   </li>
 
                   <li class="divider"></li>
-
-                  <!--- These menu items will only appear in the "More" dropdown menu. --->
-                  <li><a href="#">Manufacturing</a></li>
-                  <li><a href="#">HR</a></li>
-                  <li><a href="#">Marketing</a></li>
-                  <li><a href="#">Business Intelligence</a></li>
-                  <li><a href="#">Web POS</a></li>
                 </ul>
               </li>
               </template>
