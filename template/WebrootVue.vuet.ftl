@@ -51,6 +51,12 @@
     padding-bottom: 10px;
   }
 
+  .navbar-nav>li>a>img {
+    display: block;
+    padding-bottom: 10px;
+    margin-left: 50%;
+  }
+
   #top .nav>li:not(:last-child)>a {
       border-right: 1px solid #ccc;
       border-color:#2e6da4
@@ -199,7 +205,10 @@
             <ul class="nav navbar-nav">
                 <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
                   <template v-if="subscreenIndex<=7">
-                    <m-link :href="subscreen.pathWithParams"><span :class="subscreen.image"></span>{{subscreen.title}}</m-link>
+                    <m-link :href="subscreen.pathWithParams">
+                      <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
+                      <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
+                      {{subscreen.title}}</m-link>
                   </template>
                 </li>
               <!--- The "More" dropdown menu item will be hidden on extra-small displays. --->
