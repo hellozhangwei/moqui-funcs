@@ -203,6 +203,7 @@
           </div>
           <div id="navbar-menu" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
+              <template v-if="navMenuList[1]">
                 <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
                   <template v-if="subscreenIndex<=7">
                     <m-link :href="subscreen.pathWithParams">
@@ -211,8 +212,9 @@
                       {{subscreen.title}}</m-link>
                   </template>
                 </li>
+              </template>
               <!--- The "More" dropdown menu item will be hidden on extra-small displays. --->
-              <template v-if="navMenuList[1].subscreens.length>7">
+              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>7">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span>More <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -234,7 +236,7 @@
           </div>
         </div>
         <div id="app-bar-divider"></div>
-
+        <template v-if="navMenuList[2]">
         <div id="app-sub-navigation">
           <ul>
               <li v-for="(subscreen, subscreenIndex) in navMenuList[2].subscreens" :class="{selected:subscreen.active}">
@@ -242,6 +244,7 @@
               </li>
           </ul>
         </div>
+        </template>
       </nav>
     </div>
     </#if>
