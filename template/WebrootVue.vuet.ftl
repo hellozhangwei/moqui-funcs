@@ -19,10 +19,13 @@
     background-color: #2e6da4;
   }
 
+  /*
   .navbar-inverse {
     background-color: #2C3E50;
     border-color: #080808;
   }
+  */
+  .navbar { border: none; }
 
   .navbar-inverse .navbar-nav>li>a {
     text-align: center;
