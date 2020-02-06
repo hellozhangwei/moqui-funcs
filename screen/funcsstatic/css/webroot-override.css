@@ -16,6 +16,7 @@ body.dev #top nav { background: #337ab7; }
 /*.navbar-inverse .navbar-nav > li > a :first-child {color:#34495e}*/
 .navbar-inverse .navbar-text { color: #fff; font-weight: 700;margin-left: 0px;}
 .navbar-inverse .navbar-brand { color: #fff; }
+.navbar-brand>img { margin-top: 0px; }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{background-color: #286090;}
 .navbar-text { margin-top: 14px; margin-bottom: 15px;}
 #navbar-buttons .btn { color: #fff;border: none;background: transparent; }
