@@ -1,0 +1,60 @@
+/*
+ <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT" sequenceNum="999" resourceTypeEnumId="STRT_STYLESHEET" resourceValue="/funcsstatic/css/webroot-override.css"/>
+*/
+
+/*html, body, #apps-root {font-size:12px;}*/
+
+.bg-light { background-color: #ffffff !important; color:#5a5a5a !important; }
+
+body.dev #top nav { background: #337ab7; }
+#apps-root {padding-left: 5px;padding-right: 5px;}
+#top {border-bottom: 1px solid #2e6da4;border-left: 1px solid #2e6da4;border-right: 1px solid #2e6da4;/*border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;*/}
+#content { border-left: 1px solid #ddd;border-right: 1px solid #ddd;}
+.navbar { border: none; }
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {border-color: #2e6da4;}
+.navbar-inverse .navbar-nav > li > a { /*font-size: 12px;*/ color: #fff;font-weight: 700; }
+/*.navbar-inverse .navbar-nav > li > a :first-child {color:#34495e}*/
+.navbar-inverse .navbar-text { color: #fff; font-weight: 700;margin-left: 0px;}
+.navbar-inverse .navbar-brand { color: #fff; }
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{background-color: #286090;}
+.navbar-text { margin-top: 14px; margin-bottom: 15px;}
+#navbar-buttons .btn { color: #fff;border: none;background: transparent; }
+#navbar-buttons .navbar-btn.btn-default { color: #fff; }
+.navbar-nav>li>a>img {filter: brightness(0) invert(1);}
+/*.nav>li>a { padding: 5px 15px;font-size: 15px; font-weight: 500; }*/
+/*.dropdown-menu, .form-control, .select2-container--bootstrap .select2-selection{ font-size: 12px; }*/
+/**, .form-control {font-size: 12px;}*/
+.select2-container--bootstrap .select2-selection--single, .form-control,.panel{box-shadow: none}
+.panel .panel-heading>h5, .panel .panel-heading>span {font-size: 14px;}
+.dropdown-menu>li>a {font-weight: 700;color:#5a5a5a}
+.app { padding: 1rem!important;margin-bottom: .5rem!important;margin-top: .5rem!important;position: relative;display: flex;flex-direction: column;min-width: 0;
+    word-wrap: break-word;background-color: #fff;border: 1px solid #ccc;border-radius: .25rem;}
+
+@keyframes spinner { to {transform: rotate(360deg);}}
+.spinner:before { content: '';box-sizing: border-box;position: absolute;top: 50%;left: 50%;width: 20px;height: 20px;margin-top: -10px;
+    margin-left: -10px;border-radius: 50%;border: 2px solid #ccc;border-top-color: #333;animation: spinner .6s linear infinite;}
+.spinner {position: relative;width: 2em; height: 2em;margin: 0 0; font-size: 14px; text-indent: 999em;overflow: hidden; animation: spin 1s infinite steps(8);}
+
+.table > thead{background : #fff;}
+.nav.nav-tabs {margin-bottom: 0px}
+.nav-tabs + div { border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;padding:5px;border-bottom-right-radius: 0.25rem;border-top-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;}
+/*.table>thead:first-child>tr:first-child>th {text-align:right}*/
+.table>thead>tr>th {border-top: 2px solid #ddd !important;}
+.table>thead>tr>:first-child{border-left: 1px solid #ddd !important;}
+.table>thead>tr>:last-child{border-right: 1px solid #ddd !important;}
+.table-scroll-wrapper{border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;margin: 5px;}
+nav.form-list-nav {text-align:right}
+.bg-dark {background-color: #fff !important;}
+#footer { border-top: 1px solid #ddd;}
+/*#footer a{ color:#fff;}*/
+.app-list-link { font-size: 1.5em; display: inline-block; width: 200px; margin: 20px 20px 20px 20px; height: 100px;
+  color: #337ab7;background-color: #fff;border-color: #ccc;}
+.app-list-link>.glyphicon {display: block;text-align: center; padding-top: 10px; padding-bottom: 10px;font-size: 20px;}
+/*login page*/
+.tab-content{max-width:400px;margin:auto;margin-top: 80px;border:1px solid #ddd;border-radius: 4px;}
+.tab-pane{min-height:300px;}
+.Login .form-signin input {margin-top: 8px!important;margin-bottom: 8px!important;border-radius:4px!important;box-shadow: none}
+.Login .list-inline>li { display: inline-block;padding-right: 5px;padding-left: 5px;padding-top: 5px;padding-bottom: 5px;
+  border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;min-width: 100px;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;}
+.Login .list-inline>li.active{background-color:#ddd}
+#TestLoginLink{display:none}

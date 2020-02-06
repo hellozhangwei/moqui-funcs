@@ -6,6 +6,9 @@
         <screen location="component://webroot/screen/webroot.xml">
             <subscreens-item name="funcs" menu-include="false" location="component://funcs/screen/funcs.xml"/>
         </screen>
+        <screen location="component://webroot/screen/webroot.xml">
+            <subscreens-item name="funcsstatic" menu-include="false" location="component://funcs/screen/funcsstatic.xml"/>
+        </screen>
     </screen-facade>
 
 </moqui-conf>
