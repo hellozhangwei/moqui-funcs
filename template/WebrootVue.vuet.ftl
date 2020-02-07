@@ -208,7 +208,7 @@
             <ul class="nav navbar-nav">
               <template v-if="navMenuList[1]">
                 <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
-                  <template v-if="subscreenIndex<=7">
+                  <template v-if="subscreenIndex<=6">
                     <m-link :href="subscreen.pathWithParams">
                       <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
                       <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
@@ -217,19 +217,33 @@
                 </li>
               </template>
               <!--- The "More" dropdown menu item will be hidden on extra-small displays. --->
-              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>7">
+              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>6">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span>More <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
-                    <template v-if="subscreenIndex>7">
-                      <m-link :href="subscreen.pathWithParams"><span :class="subscreen.image"></span>{{subscreen.title}}</m-link>
+                    <template v-if="subscreenIndex>6">
+                      <m-link :href="subscreen.pathWithParams"><i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
+                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
+                        {{subscreen.title}}</m-link>
                     </template>
                   </li>
 
                   <li class="divider"></li>
                 </ul>
               </li>
+              </template>
+
+              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>6">
+                <template v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
+                  <template v-if="subscreenIndex>6 && subscreen.active">
+                    <li class="active">
+                      <m-link :href="subscreen.pathWithParams">
+                        <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
+                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">{{subscreen.title}}</m-link>
+                    </li>
+                  </template>
+                </template>
               </template>
             </ul>
             <ul class="nav navbar-nav navbar-right">
