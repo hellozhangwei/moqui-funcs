@@ -59,3 +59,4 @@ nav.form-list-nav {text-align:right}
   border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;min-width: 100px;border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;}
 .Login .list-inline>li.active{background-color:#ddd}
 #TestLoginLink{display:none}
+ul[role=tablist]>li{display:none}/*Vue.component('subscreens-tabs')*/
