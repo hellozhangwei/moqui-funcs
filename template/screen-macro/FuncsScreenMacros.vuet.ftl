@@ -14,8 +14,7 @@ along with this software (see the LICENSE.md file). If not, see
 <#include "runtime://template/screen-macro/DefaultScreenMacros.vuet.ftl"/>
 
 <#macro ckeditor>
-
-<ckeditor name="${.node["@name"]}"/>
-
-<!--<ckeditor editor="classic" v-model="editorData" :editor="ClassicEditor" :config="editorConfig"></ckeditor>-->
+  <#assign name><@fieldName .node/></#assign>
+  <#assign fieldValue = sri.getFieldValueString(.node)>
+  <ckeditor name="${name}" content="${fieldValue!}"/>
 </#macro>

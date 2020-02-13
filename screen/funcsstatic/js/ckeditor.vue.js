@@ -1,9 +1,11 @@
 
 Vue.component('ckeditor', {
-    props: { id:{type:String,required:false}, name:{type:String, required:true}},
+    props: {id:{type:String}, content:{type:String}, name:{type:String, required:true}},
     data: function() { return {ClassicEditor:ClassicEditor}},
-    template: '<textarea id="editor" :name="name"></textarea>',
+    template: '<div><textarea id="editor">{{content}}</textarea><input type="hidden" :name="name" :value="content"/></div>',
     mounted: function() {
+      let editor;
+      var jqEl = $(this.$el);
       ClassicEditor.create( document.querySelector( '#editor' ), {
         mention: {
           feeds: [
@@ -14,6 +16,14 @@ Vue.component('ckeditor', {
               }
           ]
         }
+      }).then( newEditor => {
+          editor = newEditor;
+          editor.model.document.on( 'change:data', () => {
+            //console.log( '---------The data has changed!-----------------'  + editor.getData());
+            jqEl.children("input").first().val(editor.getData())
+          });
+      } ).catch( error => {
+          console.error( error );
       });
     }
 });
