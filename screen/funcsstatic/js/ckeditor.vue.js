@@ -2,11 +2,11 @@
 Vue.component('ckeditor', {
     props: {id:{type:String}, content:{type:String}, name:{type:String, required:true}},
     data: function() { return {ClassicEditor:ClassicEditor}},
-    template: '<div><textarea id="editor">{{content}}</textarea><input type="hidden" :name="name" :value="content"/></div>',
+    template: '<div><textarea :id="id">{{content}}</textarea><input type="hidden" :name="name" :value="content"/></div>',
     mounted: function() {
       let editor;
       var jqEl = $(this.$el);
-      ClassicEditor.create( document.querySelector( '#editor' ), {
+      ClassicEditor.create( this.$el.querySelector('textarea'), {
         mention: {
           feeds: [
               {

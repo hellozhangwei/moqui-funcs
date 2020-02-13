@@ -16,5 +16,5 @@ along with this software (see the LICENSE.md file). If not, see
 <#macro ckeditor>
   <#assign name><@fieldName .node/></#assign>
   <#assign fieldValue = sri.getFieldValueString(.node)>
-  <ckeditor name="${name}" content="${fieldValue!?html}"/>
+  <ckeditor name="${name}" content="${fieldValue!?html}" id="<@fieldId .node/>"/>
 </#macro>
