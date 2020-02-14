@@ -62,6 +62,9 @@ Vue.component('ckeditor', {
                 minimumCharacters: 0
               }
           ]
+        },
+        image: {
+            resizeUnit: 'px'
         }
       }).then( newEditor => {
           editor = newEditor;
