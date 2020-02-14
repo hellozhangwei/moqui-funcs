@@ -1,6 +1,6 @@
 
 Vue.component('ckeditor', {
-    props: {id:{type:String}, content:{type:String}, name:{type:String, required:true}},
+    props: {id:{type:String}, content:{type:String}, feedUrl:{type:String}, name:{type:String, required:true}},
     data: function() { return {
       ClassicEditor:ClassicEditor,
       feedItems : [
@@ -15,6 +15,7 @@ Vue.component('ckeditor', {
     methods:{
       getFeedItems:function( queryText ) {
           return new Promise( resolve => {
+              /*
               setTimeout( () => {
                   const itemsToDisplay = this.feedItems
                       // Filter out the full list of all items to only those matching the query text.
@@ -23,7 +24,18 @@ Vue.component('ckeditor', {
                       .slice( 0, 10 );
                   resolve( itemsToDisplay );
               }, 100 );
-          } );
+              */
+
+              if (!this.feedUrl || this.feedUrl.length === 0) return;
+
+              var reqData = { moquiSessionToken: this.$root.moquiSessionToken };
+
+              $.ajax({ type:"POST", url:this.feedUrl, data:reqData, dataType:"json", headers:{Accept:'application/json'},
+                error:moqui.handleAjaxError, success: function(feedItems) {
+                const itemsToDisplay = feedItems.filter( isItemMatching ).slice( 0, 10 )
+                resolve(itemsToDisplay)
+              }});
+          });
 
           // Filtering function - it uses the `name` and `username` properties of an item to find a match.
           function isItemMatching( item ) {

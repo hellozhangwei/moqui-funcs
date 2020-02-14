@@ -16,5 +16,6 @@ along with this software (see the LICENSE.md file). If not, see
 <#macro ckeditor>
   <#assign name><@fieldName .node/></#assign>
   <#assign fieldValue = sri.getFieldValueString(.node)>
-  <ckeditor name="${name}" content="${fieldValue!?html}" id="<@fieldId .node/>"/>
+  <#assign urlInstance = sri.makeUrlByType(.node["@feedUrl"], "transition", .node, "true")>
+  <ckeditor name="${name}" content="${fieldValue!?html}" id="<@fieldId .node/>" feedUrl="${urlInstance}"/>
 </#macro>
