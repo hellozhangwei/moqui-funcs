@@ -60,3 +60,16 @@ nav.form-list-nav {text-align:right}
 .Login .list-inline>li.active{background-color:#ddd}
 #TestLoginLink{display:none}
 ul[role=tablist]>li{display:none}/*Vue.component('subscreens-tabs')*/
+
+.dz-clickable{
+  /*width:600px;*/
+  /*height:150px; */
+  padding:15px;
+  border-style:dashed !important;
+  border-color:#2c003a !important;
+  border-width:2px !important;
+  background-color:#fdfbfb !important;
+  color:#462a51 !important;
+  border-radius: 3px;
+  cursor: pointer;
+}

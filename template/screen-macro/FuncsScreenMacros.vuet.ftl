@@ -19,3 +19,8 @@ along with this software (see the LICENSE.md file). If not, see
   <#assign urlInstance = sri.makeUrlByType(.node["@feedUrl"], "transition", .node, "true")>
   <ckeditor name="${name}" content="${fieldValue!?html}" id="<@fieldId .node/>" feedUrl="${urlInstance}"/>
 </#macro>
+
+<#macro dropzone>
+  <#assign urlInstance = sri.makeUrlByType(.node["@url"], "transition", .node, "false")>
+  <dropzone id="${.node["@id"]}" url="${urlInstance}"/>
+</#macro>

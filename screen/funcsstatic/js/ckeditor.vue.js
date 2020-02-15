@@ -1,4 +1,12 @@
 
+Vue.component('dropzone', {
+    props: {id:{type:String}, url:{type:String, required:true}},
+    template: '<div :id="id"></div>',
+    mounted: function() {
+      new Dropzone(this.$el, { url: this.url});
+    }
+})
+
 Vue.component('ckeditor', {
     props: {id:{type:String}, content:{type:String}, feedUrl:{type:String}, name:{type:String, required:true}},
     data: function() { return {

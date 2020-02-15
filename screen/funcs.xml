@@ -25,6 +25,9 @@ along with this software (see the LICENSE.md file). If not, see
         // Moqui Library (3rd party lib workarounds, NotificationClient, etc)
         html_scripts.add('/js/CombinedBase.min.js')
 
+        html_scripts.add('/funcsstatic/js/dropzone.js')
+        html_stylesheets.add('/funcsstatic/js/dropzone.css')
+
         // jquery-validate locale specific scripts
         Map validateScriptsOut = ec.service.sync().name("webroot.LocaleServices.get#ValidateLocaleScripts").call()
         if (validateScriptsOut.messagesLocation) html_scripts.add(validateScriptsOut.messagesLocation)
