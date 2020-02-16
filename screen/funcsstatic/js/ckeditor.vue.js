@@ -4,9 +4,9 @@ Vue.component('dropzone', {
     template: '<div :id="id"></div>',
     mounted: function() {
 
-      this.params.moquiSessionToken=this.$root.moquiSessionToken
+      var reqData = $.extend({ moquiSessionToken:this.$root.moquiSessionToken}, this.params);
 
-      new Dropzone(this.$el, { url: this.url, paramName:this.paramName, params:this.params});
+      new Dropzone(this.$el, { url: this.url, paramName:this.paramName, params:reqData});
     }
 })
 
