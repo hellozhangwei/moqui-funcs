@@ -1,9 +1,18 @@
 
 Vue.component('dropzone', {
-    props: {id:{type:String}, url:{type:String, required:true}},
+    props: {id:{type:String}, url:{type:String, required:true}, paramName:{type:String}, params:{type:String}},
     template: '<div :id="id"></div>',
     mounted: function() {
-      new Dropzone(this.$el, { url: this.url});
+
+      console.log("----------------------this.params-------------" + this.params);
+
+      var paramsObj =  JSON.parse(this.params)
+
+      //const json = '{"workEffortId":"HM-004"}';const obj = JSON.parse(json);
+
+      var mergedParamsObj = {...{moquiSessionToken: this.$root.moquiSessionToken}, ...paramsObj }
+
+      new Dropzone(this.$el, { url: this.url, paramName:this.paramName, params:mergedParamsObj});
     }
 })
 

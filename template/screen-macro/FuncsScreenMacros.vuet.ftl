@@ -22,5 +22,8 @@ along with this software (see the LICENSE.md file). If not, see
 
 <#macro dropzone>
   <#assign urlInstance = sri.makeUrlByType(.node["@url"], "transition", .node, "false")>
-  <dropzone id="${.node["@id"]}" url="${urlInstance}"/>
+
+  <#assign params = ec.getResource().expand(.node["@params"], "")><#--params here is a string like [workEffortId:HM-004]-->
+
+  <dropzone id="${.node["@id"]}" url="${urlInstance}" paramName="${.node["@paramName"]!"file"}" params='{"workEffortId":"HM-004"}'/>
 </#macro>
