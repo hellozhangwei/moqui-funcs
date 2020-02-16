@@ -20,10 +20,11 @@ along with this software (see the LICENSE.md file). If not, see
   <ckeditor name="${name}" content="${fieldValue!?html}" id="<@fieldId .node/>" feedUrl="${urlInstance}"/>
 </#macro>
 
+<#--usage <dropzone id="testzone" url="createContent" paramName="contentFile" params="${groovy.json.JsonOutput.toJson([workEffortId:workEffortId])}"/>-->
 <#macro dropzone>
   <#assign urlInstance = sri.makeUrlByType(.node["@url"], "transition", .node, "false")>
 
   <#assign params = ec.getResource().expand(.node["@params"], "")><#--params here is a string like [workEffortId:HM-004]-->
 
-  <dropzone id="${.node["@id"]}" url="${urlInstance}" paramName="${.node["@paramName"]!"file"}" params='{"workEffortId":"HM-004"}'/>
+  <dropzone id="${.node["@id"]}" url="${urlInstance}" paramName="${.node["@paramName"]!"file"}" v-bind:params='${params}'/>
 </#macro>
