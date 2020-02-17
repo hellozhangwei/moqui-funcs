@@ -42,11 +42,11 @@ along with this software (see the LICENSE.md file). If not, see
             // Vue JS
             footer_scripts.add('/libs/vue/vue.js')
 
-            footer_scripts.add('/funcsstatic/js/ckeditor.js')
-            footer_scripts.add('/funcsstatic/js/Funcs.vue.js')
-
             // Webroot Vue instance, in footer so runs after page loaded
             footer_scripts.add('/js/WebrootVue.js')
+
+            footer_scripts.add('/funcsstatic/js/ckeditor.js')
+            footer_scripts.add('/funcsstatic/js/Funcs.vue.js')
         }
 
         // conditional QZ Tray scripts, only include if enabled
