@@ -248,7 +248,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="${sri.buildUrl("/Login/logout").url}" data-toggle="tooltip" title="${ec.l10n.localize("Logout")} ${(ec.user.userAccount.userFullName)!''}"
-                onclick="return confirm('${ec.l10n.localize("Logout")} ${(ec.user.userAccount.userFullName)!''}?')"  data-placement="bottom"><span class="glyphicon glyphicon-off"></span> Sign Out</a></li>
+                onclick="return confirm('${ec.l10n.localize("Logout")} ${(ec.user.userAccount.userFullName)!''}?')"  data-placement="bottom"><span class="glyphicon glyphicon-off"></span> 退出</a></li>
             </ul>
           </div>
         </div>
