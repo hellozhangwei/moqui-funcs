@@ -123,7 +123,10 @@ Vue.component('tree-item', {
         toggle: function() { if (this.isFolder) { this.open = !this.open; } },
         setSelected: function() { this.top.currentPath = this.model.id; this.open = true; }
     },
-    mounted: function() { if (this.model.state && this.model.state.opened) { this.open = true; } }
+    mounted: function() {
+        if (this.model.state && this.model.state.opened) { this.open = true; };
+        if (this.isFolder) { this.open = true }
+    }
 });
 
 Vue.component('container-dialog', {
