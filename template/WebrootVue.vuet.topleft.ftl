@@ -81,7 +81,7 @@
     <#list navbarCompList! as navbarCompUrl><input type="hidden" class="confNavPluginUrl" value="${navbarCompUrl}"></#list>
 
     <!--left menu (second and third level menu)-->
-    <template v-if="navMenuList[2] && navMenuList[2].subscreens.length>0">
+    <template v-if="navMenuList[2] && navMenuList[2].subscreens && navMenuList[2].subscreens.length>0">
       <div class="navbar-default sidebar nav-left" role="navigation"><!--navbar-right:class="{navLeftWidth:navMenuList[2]}"-->
         <ul class="nav in" style="padding-left: 0px;"><!-- style="overflow-x: auto;overflow-y: auto;height:700px;"-->
 
@@ -143,7 +143,7 @@
           </li>
         </template>
         <!--- The "More" dropdown menu item will be hidden on extra-small displays. --->
-        <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>6">
+        <template v-if="navMenuList[1] && navMenuList[1].subscreens && navMenuList[1].subscreens.length>6">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span>More <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -159,7 +159,7 @@
           </li>
         </template>
 
-        <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>6">
+        <template v-if="navMenuList[1] && navMenuList[1].subscreens && navMenuList[1].subscreens.length>6">
           <template v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
             <template v-if="subscreenIndex>6 && subscreen.active">
               <li class="active">
@@ -227,7 +227,7 @@
     </nav>
   </div>
 </#if>
-    <div id="content" :class="{contentMargin:(navMenuList[2] && navMenuList[2].subscreens.length>0)}" ><div class="inner"><div class="container-fluid">
+    <div id="content" :class="{contentMargin:(navMenuList[2] && navMenuList[2].subscreens && navMenuList[2].subscreens.length>0)}" ><div class="inner"><div class="container-fluid">
         <subscreens-active></subscreens-active>
     </div></div></div>
 
