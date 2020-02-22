@@ -1,21 +1,19 @@
 <style type="text/css">
-#apps-root {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.navbar-default {background-color: #fff;}
+
+#apps-root { padding-left: 0px; padding-right: 0px; }
+
+.navbar-default .navbar-nav>li>a { color: #fff; }
+.navbar-default .navbar-nav>li>a>.glyphicon {padding-right: 10px;}
+.navbar-default .navbar-nav>.active>a {border-radius: 4px;background-color: #fff;padding: 6px 8px;margin: 4px 2px;}
+.navbar-nav>li>a{padding: 6px 8px;margin: 4px 2px;}
 
 /*#top, #content{ margin: 0 0 0 250px; }*/
-.contentMargin{ margin: 0 0 0 250px; }
+.contentMargin{ margin: 0 0 0 220px; }
 
 /*#nice-menu {height:51px;background:#337ab7}*/
 
-.sidebar {
-    z-index: 1;
-    position: absolute;
-    width: 250px;
-    #border-top: 1px solid #516f90;
-}
+.sidebar { z-index: 1; position: absolute; width: 220px;padding-top:50px;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;height:100%;}
+.sidebar li a {padding: 12px 16px;}
 
 .ttdiv {
     padding: 10px 15px;float: left;
@@ -46,14 +44,6 @@
     #float: right;
     padding-bottom: 10px;
     cursor: pointer !important;
-}
-
-.sidebar {
-  padding-top:50px;
-}
-
-.sidebar li a {
-  padding: 12px 16px;
 }
 
 .nav>li.selected{
