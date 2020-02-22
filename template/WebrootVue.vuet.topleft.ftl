@@ -46,16 +46,20 @@
     cursor: pointer !important;
 }
 
-.nav>li.selected{
+.nav-left li.active{
   background-color: #eee;
   box-shadow: inset 4px 0 0 #4b4ba3;
 }
 
-.nav>li.selected>a{
-  margin-left: 4px;
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
 }
 
-.selected3{
+.sidebar-second-level-items>li a {
+    padding: 8px 16px 8px 40px;
+}
+
+.sidebar-second-level-items>li.active{
   background: rgba(0,0,0,0.04);
 }
 </style>
@@ -75,7 +79,7 @@
       <div class="navbar-default sidebar nav-left" role="navigation"><!--navbar-right:class="{navLeftWidth:navMenuList[2]}"-->
         <ul class="nav in" style="padding-left: 0px;"><!-- style="overflow-x: auto;overflow-y: auto;height:700px;"-->
 
-          <li v-for="(subscreen2, subscreenIndex) in navMenuList[2].subscreens" :class="{selected:subscreen2.active}">
+          <li v-for="(subscreen2, subscreenIndex) in navMenuList[2].subscreens" :class="{active:subscreen2.active}">
             <m-link :href="subscreen2.pathWithParams">
               <template v-if="subscreen2.image">
                 <i v-if="subscreen2.imageType === 'icon'" :class="subscreen2.image" style="padding-right: 4px;"></i>
@@ -87,8 +91,8 @@
 
             <!--start third level-->
             <template v-if="subscreen2.active && navMenuList[3] && !navMenuList[3].hasTabMenu">
-              <ul class="nav in ttspan-fill" style="padding-left: 20px;">
-                <li v-for="(subscreen3, subscreenIndex) in navMenuList[3].subscreens" :class="{selected3:subscreen3.active}">
+              <ul class="nav in ttspan-fill sidebar-second-level-items" >
+                <li v-for="(subscreen3, subscreenIndex) in navMenuList[3].subscreens" :class="{active:subscreen3.active}">
                   <m-link :href="subscreen3.pathWithParams">
                     <template v-if="subscreen3.image">
                       <i v-if="subscreen3.imageType === 'icon'" :class="subscreen3.image" style="padding-right: 4px;"></i>
