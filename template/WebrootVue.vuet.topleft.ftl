@@ -61,6 +61,10 @@
   box-shadow: inset 4px 0 0 #4b4ba3;
 }
 
+.nav>li.selected>a{
+  margin-left: 4px;
+}
+
 .selected3{
   background: rgba(0,0,0,0.04);
 }
