@@ -48,12 +48,17 @@
     cursor: pointer !important;
 }
 
-.nav-left{
+.sidebar {
   padding-top:50px;
+}
+
+.sidebar li a {
+  padding: 12px 16px;
 }
 
 .nav>li.selected{
   background-color: #eee;
+  box-shadow: inset 4px 0 0 #4b4ba3;
 }
 
 .selected3{
@@ -72,9 +77,9 @@
     <#list navbarCompList! as navbarCompUrl><input type="hidden" class="confNavPluginUrl" value="${navbarCompUrl}"></#list>
 
     <!--left menu (second and third level menu)-->
-    <template v-if="navMenuList[2]">
+    <template v-if="navMenuList[2] && navMenuList[2].subscreens.length>0">
       <div class="navbar-default sidebar nav-left" role="navigation"><!--navbar-right:class="{navLeftWidth:navMenuList[2]}"-->
-        <ul class="nav in" style="padding-left: 10px;"><!-- style="overflow-x: auto;overflow-y: auto;height:700px;"-->
+        <ul class="nav in" style="padding-left: 0px;"><!-- style="overflow-x: auto;overflow-y: auto;height:700px;"-->
 
           <li v-for="(subscreen2, subscreenIndex) in navMenuList[2].subscreens" :class="{selected:subscreen2.active}">
             <m-link :href="subscreen2.pathWithParams">
@@ -218,8 +223,7 @@
     </nav>
   </div>
 </#if>
-
-    <div id="content" :class="{contentMargin:navMenuList[2]}" ><div class="inner"><div class="container-fluid">
+    <div id="content" :class="{contentMargin:(navMenuList[2] && navMenuList[2].subscreens.length>0)}" ><div class="inner"><div class="container-fluid">
         <subscreens-active></subscreens-active>
     </div></div></div>
 
