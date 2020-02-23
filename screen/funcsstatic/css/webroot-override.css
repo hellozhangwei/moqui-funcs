@@ -8,8 +8,8 @@
 
 body.dev #top nav { background: #337ab7; }
 #apps-root {padding-left: 5px;padding-right: 5px;}
-#top {border-bottom: 1px solid #2e6da4;border-left: 1px solid #2e6da4;border-right: 1px solid #2e6da4;/*border-bottom-right-radius: 0.25rem;border-bottom-left-radius: 0.25rem;*/}
-#content { border-left: 1px solid #ddd;border-right: 1px solid #ddd;}
+/*#top {border-bottom: 1px solid #2e6da4;border-left: 1px solid #2e6da4;border-right: 1px solid #2e6da4;}*/
+/*#content { border-left: 1px solid #ddd;border-right: 1px solid #ddd;}*/
 .navbar { border: none; }
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {border-color: #2e6da4;}
 .navbar-inverse .navbar-nav > li > a { /*font-size: 12px;*/ color: #fff;font-weight: 700; }
