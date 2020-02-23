@@ -49,6 +49,12 @@
     #float: right;
     padding-bottom: 10px;
     cursor: pointer !important;
+    border-top: 1px solid #e5e5e5;
+    position: fixed !important;
+    height: 48px;
+    bottom: 0;
+    display: flex;
+    width: 219px;
 }
 
 .nav-left li.active{background-color: #eee;box-shadow: inset 4px 0 0 #2e6da4;}
@@ -147,7 +153,7 @@
             <!--end third level-->
           </li>
           <li >
-            <a class="ttspan-right" onclick="$('#apps-root').toggleClass('tt-toggled')"><i class="fa fa-align-justify" style="padding-right: 8px;"></i><span class="ttspan-fill">Collapse sidebar</span></a>
+            <a class="ttspan-right" onclick="$('#apps-root').toggleClass('tt-toggled')"><i class="fa fa-align-justify" style="padding-right: 8px;"></i><span class="ttspan-fill">收起侧边栏</span></a>
           </li>
         </ul>
 
@@ -265,6 +271,7 @@
         <subscreens-active></subscreens-active>
     </div></div></div>
 
+<#--
     <div id="footer" class="bg-dark">
         <#assign footerItemList = sri.getThemeValues("STRT_FOOTER_ITEM")>
         <div id="apps-footer-content">
@@ -274,7 +281,7 @@
             </#list>
         </div>
     </div>
-
+-->
 </div>
 
 <div id="screen-document-dialog" class="modal dynamic-dialog" aria-hidden="true" style="display: none;" tabindex="-1">
