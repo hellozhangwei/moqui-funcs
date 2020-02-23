@@ -2,6 +2,11 @@
 
 #apps-root { padding-left: 0px; padding-right: 0px; }
 
+#top {height: 40px;}
+#top .navbar { height: 40px;min-height:40px;padding: 0 16px;}
+.navbar-brand { height: 40px; padding: 5px 5px;}
+.navbar-brand>img {height: 25px;}
+
 .navbar-default .navbar-nav>li>a { color: #fff; }
 .navbar-default .navbar-nav>li>a>.glyphicon {padding-right: 10px;}
 .navbar-default .navbar-nav>.active>a {border-radius: 4px;background-color: #fff;padding: 6px 8px;margin: 4px 2px;}
