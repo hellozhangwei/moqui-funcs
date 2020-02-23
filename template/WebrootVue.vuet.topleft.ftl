@@ -18,7 +18,8 @@
 
 /*#nice-menu {height:51px;background:#337ab7}*/
 
-.sidebar { z-index: 1; position: absolute; width: 220px;padding-top:50px;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;height:100%;}
+.sidebar { z-index: 1; position: fixed; width: 220px;top: 40px;bottom: 0;left: 0;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;height:100%;}
+
 .sidebar li a {padding: 12px 16px;}
 
 .ttdiv {
@@ -161,11 +162,11 @@
         </ul>
         </div>
       </div>
-     
+
     </template>
 <#if hideNav! != 'true'>
   <div id="top">
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
       <div class="navbar-header">
         <#assign headerLogoList = sri.getThemeValues("STRT_HEADER_LOGO")>
         <#if headerLogoList?has_content><m-link href="/apps" class="navbar-brand"><img src="${sri.buildUrl(headerLogoList?first).getUrl()}" alt="Home"></m-link></#if>
