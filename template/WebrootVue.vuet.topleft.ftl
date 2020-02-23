@@ -7,10 +7,10 @@
 .navbar-brand { height: 40px; padding: 5px 5px;}
 .navbar-brand>img {height: 25px;}
 
-.navbar-default .navbar-nav>li>a { color: #fff; }
+.navbar-default .navbar-nav>li>a { color: #fff; padding: 6px 8px;margin: 4px 2px;border-radius: 4px;}
+.navbar-default .navbar-nav>li>a:hover {color: #fff;background-color: rgba(255,255,255,0.2);;}
 .navbar-default .navbar-nav>li>a>.glyphicon {padding-right: 10px;}
-.navbar-default .navbar-nav>.active>a {border-radius: 4px;background-color: #fff;padding: 6px 8px;margin: 4px 2px;}
-.navbar-nav>li>a{padding: 6px 8px;margin: 4px 2px;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: #fff;}
 
 /*#top, #content{ margin: 0 0 0 250px; }*/
 .contentMargin{ margin: 0 0 0 220px; }
