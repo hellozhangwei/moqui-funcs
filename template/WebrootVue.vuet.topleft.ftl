@@ -33,11 +33,6 @@
     width: 50px !important;
 }
 
-#apps-root.tt-toggled .sidebar sidebar-nav{
-    width: 46px !important;
-    background-color: red;
-}
-
 #apps-root.tt-toggled #content{
     margin-left: 46px;
 }
@@ -45,6 +40,8 @@
 #apps-root.tt-toggled .sidebar-brand{
     border-bottom: none;
 }
+
+#apps-root.tt-toggled .ttspan-right {width: 50px;}
 
 .ttspan-right {
     padding-bottom: 10px;
