@@ -51,10 +51,7 @@
     cursor: pointer !important;
 }
 
-.nav-left li.active{
-  background-color: #eee;
-  box-shadow: inset 4px 0 0 #4b4ba3;
-}
+.nav-left li.active{background-color: #eee;box-shadow: inset 4px 0 0 #2e6da4;}
 
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: transparent;
