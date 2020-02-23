@@ -42,7 +42,7 @@
     border-bottom: none;
 }
 
-#apps-root.tt-toggled .ttspan-right {width: 50px;}
+#apps-root.tt-toggled .ttspan-right {width: 49px;}
 
 .ttspan-right {
     padding-bottom: 10px;
@@ -87,6 +87,7 @@
     align-items: center;
     padding: 10px 4px;
     color: #2e2e2e;
+    text-decoration: none;
 }
 
 .avatar-container {
