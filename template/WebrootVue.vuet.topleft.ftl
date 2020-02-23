@@ -56,6 +56,8 @@
 
 .ttspan-right:hover {background-color: #e5e5e5 !important;}
 
+.ttspan-right {background-color: #f8f8f8 !important;}
+
 
 .nav-left li.active{background-color: #eee;box-shadow: inset 4px 0 0 #2e6da4;}
 
