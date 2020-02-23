@@ -24,7 +24,7 @@
 }
 
 #apps-root.tt-toggled .sidebar {
-    width: 46px !important;
+    width: 50px !important;
 }
 
 #apps-root.tt-toggled .sidebar sidebar-nav{
@@ -62,6 +62,36 @@
 .sidebar-second-level-items>li.active{
   background: rgba(0,0,0,0.04);
 }
+
+.context-header {
+    /*position: relative;
+    margin-right: 2px;
+    width: 220px;*/
+}
+
+.context-header>a {
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 4px;
+    color: #2e2e2e;
+}
+
+.avatar-container {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    background: #eee;
+    border-radius: 4px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.identicon {
+    text-align: center;
+    line-height: 38px;
+}
 </style>
 <div id="apps-root"><#-- NOTE: webrootVue component attaches here, uses this and below for template -->
     <input type="hidden" id="confMoquiSessionToken" value="${ec.web.sessionToken}">
@@ -77,7 +107,15 @@
     <!--left menu (second and third level menu)-->
     <template v-if="navMenuList[2] && navMenuList[2].subscreens && navMenuList[2].subscreens.length>0">
       <div class="navbar-default sidebar nav-left" role="navigation"><!--navbar-right:class="{navLeftWidth:navMenuList[2]}"-->
-        <ul class="nav in" style="padding-left: 0px;"><!-- style="overflow-x: auto;overflow-y: auto;height:700px;"-->
+        <div class="context-header">
+          <a title="boke" href="/funcs/boke">
+            <div class="avatar-container">
+              <div class="identicon">B</div>
+            </div>
+            <div class="sidebar-context-title ttspan-fill">boke</div>
+          </a>
+        </div>
+        <ul class="nav in"><!-- style="overflow-x: auto;overflow-y: auto;height:700px;"-->
 
           <li v-for="(subscreen2, subscreenIndex) in navMenuList[2].subscreens" :class="{active:subscreen2.active}">
             <m-link :href="subscreen2.pathWithParams">
