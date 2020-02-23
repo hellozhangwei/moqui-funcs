@@ -11,6 +11,7 @@
 .navbar-default .navbar-nav>li>a:hover {color: #fff;background-color: rgba(255,255,255,0.2);;}
 .navbar-default .navbar-nav>li>a>.glyphicon {padding-right: 10px;}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover { background-color: #fff;}
+.nav-sidebar-inner-scroll{overflow-y: scroll;height: 100%;width: 100%;overflow: auto;}
 
 /*#top, #content{ margin: 0 0 0 250px; }*/
 .contentMargin{ margin: 0 0 0 220px; }
@@ -46,7 +47,6 @@
 }
 
 .ttspan-right {
-    #float: right;
     padding-bottom: 10px;
     cursor: pointer !important;
     border-top: 1px solid #e5e5e5;
@@ -56,6 +56,9 @@
     display: flex;
     width: 219px;
 }
+
+.ttspan-right:hover {background-color: #e5e5e5 !important;}
+
 
 .nav-left li.active{background-color: #eee;box-shadow: inset 4px 0 0 #2e6da4;}
 
@@ -115,6 +118,7 @@
     <!--left menu (second and third level menu)-->
     <template v-if="navMenuList[2] && navMenuList[2].subscreens && navMenuList[2].subscreens.length>0">
       <div class="navbar-default sidebar nav-left" role="navigation"><!--navbar-right:class="{navLeftWidth:navMenuList[2]}"-->
+        <div class="nav-sidebar-inner-scroll">
         <div class="context-header">
           <a title="boke" href="/funcs/boke">
             <div class="avatar-container">
@@ -156,7 +160,7 @@
             <a class="ttspan-right" onclick="$('#apps-root').toggleClass('tt-toggled')"><i class="fa fa-align-justify" style="padding-right: 8px;"></i><span class="ttspan-fill">收起侧边栏</span></a>
           </li>
         </ul>
-
+        </div>
       </div>
      
     </template>
