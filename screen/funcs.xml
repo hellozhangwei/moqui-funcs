@@ -49,6 +49,11 @@ along with this software (see the LICENSE.md file). If not, see
             footer_scripts.add('/funcsstatic/js/Funcs.vue.js')
         }
 
+        def footerScriptList = sri.getThemeValues("STRT_FOOTER_SCRIPT")
+        footerScriptList.each{footerScript->
+            footer_scripts.add(footerScript)
+        }
+
         // conditional QZ Tray scripts, only include if enabled
         if (ec.user.getPreference("qz.print.enabled") == "true") {
             footer_scripts.add('/js/qz-tray/sha-256.min.js')
@@ -57,10 +62,22 @@ along with this software (see the LICENSE.md file). If not, see
         }
     ]]></script></pre-actions>
 
+    <actions>
+        <set field="templateLocation" value="component://funcs/template/WebrootVue.vuet.ftl"/>
+        <script>
+            <![CDATA[
+            def locationList = sri.getThemeValues("WEBROOT_VUE_LOCATION")
+            if(locationList?.size()>0){
+                templateLocation = locationList[0]
+            }
+            ]]>
+        </script>
+    </actions>
+
     <widgets>
         <render-mode>
             <!-- for html just render the navbar (Vue page wrapper and nav component) -->
-            <text type="html" location="component://funcs/template/WebrootVue.vuet.ftl"/>
+            <text type="html" location="${templateLocation}"/>
             <!-- not meant to be used for anything else, for all other render modes go directly through /apps -->
         </render-mode>
     </widgets>

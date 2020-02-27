@@ -14,4 +14,8 @@ along with this software (see the LICENSE.md file). If not, see
 -->
 <entity-facade-xml type="seed-initial">
     <moqui.screen.ScreenThemeResource screenThemeId="DEFAULT" sequenceNum="999" resourceTypeEnumId="STRT_STYLESHEET" resourceValue="/funcsstatic/css/webroot-override.css"/>
+
+    <moqui.basic.Enumeration description="Footer Script URL" enumId="STRT_FOOTER_SCRIPT" enumTypeId="ScreenThemeResourceType"/>
+    <moqui.basic.Enumeration description="Webroot Vue location" enumId="WEBROOT_VUE_LOCATION" enumTypeId="ScreenThemeResourceType"/>
+
 </entity-facade-xml>
