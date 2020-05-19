@@ -204,11 +204,12 @@
             <#assign headerTitleList = sri.getThemeValues("STRT_HEADER_TITLE")>
             <#if headerTitleList?has_content><div class="navbar-brand">${ec.resource.expand(headerTitleList?first, "")}</div></#if>
           </div>
+          <#assign moreSize=7>
           <div id="navbar-menu" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <template v-if="navMenuList[1]">
                 <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
-                  <template v-if="subscreenIndex<=6">
+                  <template v-if="(subscreenIndex+1)<=${moreSize}">
                     <m-link :href="subscreen.pathWithParams">
                       <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
                       <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
@@ -217,12 +218,13 @@
                 </li>
               </template>
               <!--- The "More" dropdown menu item will be hidden on extra-small displays. --->
-              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>6">
+
+              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>${moreSize}">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span>More <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span>更多 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
-                    <template v-if="subscreenIndex>6">
+                    <template v-if="(subscreenIndex+1)>${moreSize}">
                       <m-link :href="subscreen.pathWithParams"><i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
                         <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
                         {{subscreen.title}}</m-link>
@@ -234,9 +236,9 @@
               </li>
               </template>
 
-              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>6">
+              <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>${moreSize}">
                 <template v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
-                  <template v-if="subscreenIndex>6 && subscreen.active">
+                  <template v-if="(subscreenIndex+1)>${moreSize} && subscreen.active">
                     <li class="active">
                       <m-link :href="subscreen.pathWithParams">
                         <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
