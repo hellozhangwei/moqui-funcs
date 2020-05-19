@@ -78,3 +78,84 @@ nav.form-list-nav>form.form-inline{margin:0}
   border-radius: 3px;
   cursor: pointer;
 }
+
+/*bootstrap 4 text color style start*/
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-primary {
+    color: #009aff !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+    color: #009aff !important;
+}
+
+.text-secondary {
+    color: #6c757d !important;
+}
+
+a.text-secondary:hover,
+a.text-secondary:focus {
+    color: #494f54 !important;
+}
+
+.text-success {
+    color: #00c875 !important;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+    color: #00c875 !important;
+}
+
+.text-info {
+    color: #009aff !important;
+}
+
+a.text-info:hover,
+a.text-info:focus {
+    color: #009aff !important;
+}
+
+.text-warning {
+    color: #ffcb00 !important;
+}
+
+a.text-warning:hover,
+a.text-warning:focus {
+    color: #ffcb00 !important;
+}
+
+.text-danger {
+    color: #e0394e !important;
+}
+
+a.text-danger:hover,
+a.text-danger:focus {
+    color: #e0394e !important;
+}
+
+.text-light {
+    color: #bbbdbf !important;
+    font-size: xx-small;
+}
+
+a.text-light:hover,
+a.text-light:focus {
+    color: #cbd3da !important;
+}
+
+.text-dark {
+    color: #343a40 !important;
+}
+
+a.text-dark:hover,
+a.text-dark:focus {
+    color: #121416 !important;
+}
+
+/*bootstrap 4 text color style end*/
