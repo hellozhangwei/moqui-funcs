@@ -45,7 +45,11 @@ body.dev #top nav { background: #337ab7; }
 .table>thead>tr>:first-child{border-left: 1px solid #ddd !important;}
 .table>thead>tr>:last-child{border-right: 1px solid #ddd !important;}
 .table-scroll-wrapper{border-left: 1px solid #ddd;border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;margin: 5px;}
-nav.form-list-nav {text-align:right}
+
+nav.form-list-nav>form.form-inline { float: right; }
+nav.form-list-nav .pagination {float: right; }
+nav.form-list-nav>form.form-inline{margin:0}
+
 .bg-dark {background-color: #fff !important;}
 #footer { border-top: 1px solid #ddd;}
 /*#footer a{ color:#fff;}*/
