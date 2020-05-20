@@ -212,7 +212,7 @@
                   <template v-if="(subscreenIndex+1)<=${moreSize}">
                     <m-link :href="subscreen.pathWithParams">
                       <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                      <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
+                      <img v-else :src="subscreen.image" :alt="subscreen.title" width="14">
                       {{subscreen.title}}</m-link>
                   </template>
                 </li>
@@ -226,7 +226,7 @@
                   <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
                     <template v-if="(subscreenIndex+1)>${moreSize}">
                       <m-link :href="subscreen.pathWithParams"><i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
+                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="14">
                         {{subscreen.title}}</m-link>
                     </template>
                   </li>
@@ -242,7 +242,7 @@
                     <li class="active">
                       <m-link :href="subscreen.pathWithParams">
                         <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">{{subscreen.title}}</m-link>
+                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="14">{{subscreen.title}}</m-link>
                     </li>
                   </template>
                 </template>
