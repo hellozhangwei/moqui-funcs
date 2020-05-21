@@ -79,6 +79,7 @@ nav.form-list-nav>form.form-inline{margin:0}
   cursor: pointer;
 }
 
+.bootstrap-datetimepicker-widget.dropdown-menu{width: auto;}/*not sure why width 19em not working, overwrite it for time being*/
 /*bootstrap 4 text color style start*/
 
 .text-white {
