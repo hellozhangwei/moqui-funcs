@@ -48,7 +48,7 @@
     width:133px;
   }
 
-  .navbar-nav>li>a>.glyphicon {
+  .navbar-nav>li>a>.glyphicon, .navbar-nav>li>a>.fa {
     display:block;
     text-align:center;
     padding-bottom: 10px;
