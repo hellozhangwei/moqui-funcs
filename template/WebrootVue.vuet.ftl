@@ -1,182 +1,47 @@
 
 <style type="text/css">
-#apps-root {
-    padding-left: 0px;
-    padding-right: 0px;
-}
+  #apps-root { padding-left: 0px; padding-right: 0px; }
 
-#top {
-    height: auto;
-    border:none;
-}
-@media (min-width: 768px) { #top .navbar { height: auto;}
+  #top { height: auto; border:none; }
+  #top .nav>li:not(:last-child)>a { border-right: 1px solid #ccc; border-color:#2e6da4 }
 
-  #app-bar-divider {
-    position: relative;
-    width: 100%;
-    min-width: 1130px;
-    height: 8px;
-    background-color: #2e6da4;
-  }
+  @media (min-width: 768px) { #top .navbar { height: auto;}
 
-  /*
-  .navbar-inverse {
-    background-color: #2C3E50;
-    border-color: #080808;
-  }
-  */
+  #app-bar-divider { position: relative; width: 100%; min-width: 1130px; height: 8px; background-color: #2e6da4; }
+
   .navbar { border: none; }
 
-  .navbar-inverse .navbar-nav>li>a {
-    text-align: center;
-  }
+  .navbar-inverse .navbar-nav>li>a { text-align: center; font-weight: 400;padding-top: 10px; padding-bottom: 10px; width:133px;}
+  .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a:hover { background-color: #3498DB; }
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus { background-color: #2e6da4; }
+  .navbar-nav>li>a>i { display:block; text-align:center; padding-bottom: 10px; }
 
-  .navbar-inverse .navbar-nav>.active>a{
-    background-color: #2e6da4
-    color:#fff;
-  }
-
-  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{
-    background-color: #2e6da4;
-    color: #fff;
-
-  }
-
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width:133px;
-  }
-
-  .navbar-nav>li>a>.glyphicon, .navbar-nav>li>a>.fa {
-    display:block;
-    text-align:center;
-    padding-bottom: 10px;
-  }
-
-  .navbar-nav>li>a>img {
-    display: block;
-    padding-bottom: 10px;
-    margin-left: 50%;
-  }
-
-  #top .nav>li:not(:last-child)>a {
-      border-right: 1px solid #ccc;
-      border-color:#2e6da4
-  }
-
-/*
- .nav>li:last-child {
-      border-right: 1px solid #ccc;
-      border-color:#2e6da4
-  }
-
- .nav>li:first-child {
-     border-left: 1px solid #ccc;
-     border-color:#2e6da4
- }
- */
-
-  .navbar-inverse .navbar-nav>li>a:hover {
-    background-color: #2e6da4;
-  }
-
-  .navbar-inverse .navbar-nav > li > a {
-    font-weight: 400;
-  }
-
-  .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
-    color: #fff;
-    background-color: #2e6da4;
-  }
+  .navbar-nav>li>a>img { display: block; padding-bottom: 10px; margin-left: 50%; }
 
   /* Begin sub Menu section */
-  #app-sub-navigation {
-    #height: 48px;
-    #border-bottom: solid 1px #000000;
-    width: 100%;
-    min-width: 1130px;
-  }
+  #app-sub-navigation { #height: 48px; #border-bottom: solid 1px #000000; width: 100%; min-width: 1130px; }
 
-  #app-sub-navigation ul {
-    display: flex;
-    flex-direction: row;
-    background-color: #e6e6e6;
-    flex-grow: 1;
-    -webkit-padding-start: 0px;
-    margin-bottom:0px;
-  }
+  #app-sub-navigation ul { display: flex; flex-direction: row; background-color: #e6e6e6; flex-grow: 1; -webkit-padding-start: 0px; margin-bottom:0px; }
 
-  #app-sub-navigation ul li {
-    border-left: solid 1px #ced4da;
-    #height: 25px;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    min-width: auto;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    border-bottom: solid 1px #ced4da;
-    font-size: 12px;
-  }
-  @media screen and (max-width: 1500px) {
-    #app-sub-navigation ul li {
-      font-size: 10px;
-      min-width: auto;
-    }
-  }
-  @media screen and (max-width: 1300px) {
-    #app-sub-navigation ul li {
-      font-size: 10px;
-      min-width: 50px;
-    }
-  }
-  #app-sub-navigation ul li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.5);
-    white-space: nowrap;
-  }
-  #app-sub-navigation ul li:last-child {
-    border-right: solid 1px #ced4da;
-  }
-  #app-sub-navigation ul li:hover {
-    background-color: #fff;
-    min-height: 25px;
-    position: relative;
-  }
-  #app-sub-navigation ul li:hover a {
-    /*color: #ffffff;*/
-    text-decoration: none;
-  }
-  #app-sub-navigation ul li.selected:hover a {
-    color: #000000 !important;
-  }
-  #app-sub-navigation ul li.selected {
-    background-color: rgb(245, 247, 249);
-    position: relative;
-    #height: 25px;
-    border-bottom: none;
-  }
-  #app-sub-navigation ul li.selected :after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: calc(40%);
-    width: 0;
-    height: 0;
-    border-right: 6px solid transparent;
-    border-top: 6px solid #2e6da4;
-    border-left: 6px solid transparent;
-  }
+  #app-sub-navigation ul li { border-left: solid 1px #ced4da; #height: 25px; display: flex; align-items: center; justify-items: center; justify-content: center; min-width: auto; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; border-bottom: solid 1px #ced4da; font-size: 12px; }
+
+  @media screen and (max-width: 1500px) { #app-sub-navigation ul li { font-size: 10px; min-width: auto; } }
+
+  @media screen and (max-width: 1300px) { #app-sub-navigation ul li { font-size: 10px; min-width: 50px; } }
+
+  #app-sub-navigation ul li a { display: flex; justify-content: center; align-items: center; text-align: center; height: 100%; width: 100%; text-decoration: none; color: rgba(0, 0, 0, 0.5); white-space: nowrap; }
+
+  #app-sub-navigation ul li:last-child { border-right: solid 1px #ced4da; }
+
+  #app-sub-navigation ul li:hover { background-color: #fff; min-height: 25px; position: relative; }
+
+  #app-sub-navigation ul li:hover a { text-decoration: none; }
+
+  #app-sub-navigation ul li.selected:hover a { color: #000000 !important; }
+
+  #app-sub-navigation ul li.selected { background-color: rgb(245, 247, 249); position: relative; #height: 25px; border-bottom: none; }
+
+  #app-sub-navigation ul li.selected :after { content: ''; position: absolute; top: -2px; left: calc(40%); width: 0; height: 0; border-right: 6px solid transparent; border-top: 6px solid #2e6da4; border-left: 6px solid transparent; }
 
 </style>
 
@@ -221,7 +86,7 @@
 
               <template v-if="navMenuList[1] && navMenuList[1].subscreens.length>${moreSize}">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span>更多 <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-th-list"></i>更多 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
                     <template v-if="(subscreenIndex+1)>${moreSize}">
