@@ -28,7 +28,9 @@ html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px;
   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus { background-color: #2e6da4; }
   .navbar-nav>li>a>i { display:block; text-align:center; padding-bottom: 10px; }
 
-  .navbar-nav>li>a>img { display: block; padding-bottom: 10px; margin-left: 50%; }
+  .navbar-nav>li>a>img{ display: block; padding-bottom: 10px; margin-left: 50%; width:13px}
+  .dropdown-menu>li>a>img{width:13px;padding-right:5px}
+  .dropdown-menu>li>a>i{padding-right:5px}
 
   /* Begin sub Menu section */
   #app-sub-navigation { #height: 48px; #border-bottom: solid 1px #000000; width: 100%; min-width: 1130px; }
@@ -89,8 +91,7 @@ html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px;
                   <template v-if="(subscreenIndex+1)<=${moreSize}">
                     <m-link :href="subscreen.pathWithParams">
                       <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                      <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
-                      {{subscreen.title}}</m-link>
+                      <img v-else :src="subscreen.image" :alt="subscreen.title">{{subscreen.title}}</m-link>
                   </template>
                 </li>
               </template>
@@ -103,8 +104,7 @@ html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px;
                   <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
                     <template v-if="(subscreenIndex+1)>${moreSize}">
                       <m-link :href="subscreen.pathWithParams"><i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
-                        {{subscreen.title}}</m-link>
+                        <img v-else :src="subscreen.image" :alt="subscreen.title">{{subscreen.title}}</m-link>
                     </template>
                   </li>
 
@@ -119,7 +119,7 @@ html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px;
                     <li class="active">
                       <m-link :href="subscreen.pathWithParams">
                         <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">{{subscreen.title}}</m-link>
+                        <img v-else :src="subscreen.image" :alt="subscreen.title">{{subscreen.title}}</m-link>
                     </li>
                   </template>
                 </template>
