@@ -14,7 +14,7 @@
 
   .navbar { border: none; }
 
-  .navbar-inverse .navbar-nav>li>a { text-align: center; font-weight: 400;padding-top: 10px; padding-bottom: 10px; width:133px;}
+  .navbar-inverse .navbar-nav>li>a {color: #fff; text-align: center; font-weight: 400;padding-top: 10px; padding-bottom: 10px; width:133px;}
   .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a:hover { background-color: #3498DB; }
   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus { background-color: #2e6da4; }
   .navbar-nav>li>a>i { display:block; text-align:center; padding-bottom: 10px; }

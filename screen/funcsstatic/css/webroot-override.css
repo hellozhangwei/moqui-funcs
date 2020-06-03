@@ -3,13 +3,15 @@
 
 body.dev #top nav { background: #337ab7; }
 #apps-root {padding-left: 5px;padding-right: 5px;}
-.navbar { border: none; }
+/*.navbar { border: none; }*/
+/*
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {border-color: #2e6da4;}
 .navbar-inverse .navbar-nav > li > a { color: #fff;font-weight: 700; }
 .navbar-inverse .navbar-text { color: #fff; font-weight: 700;margin-left: 0px;}
 .navbar-inverse .navbar-brand { color: #fff; }
 .navbar-brand>img { margin-top: 0px; }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{background-color: #286090;}
+*/
 .navbar-text { margin-top: 14px; margin-bottom: 15px;}
 #navbar-buttons .btn { color: #fff;border: none;background: transparent; }
 #navbar-buttons .navbar-btn.btn-default { color: #fff; }
@@ -19,11 +21,6 @@ body.dev #top nav { background: #337ab7; }
 .panel-default>.panel-heading { background-color: #f5f5f5;}
 .app { padding: 1rem!important;margin-bottom: .5rem!important;margin-top: .5rem!important;position: relative;display: flex;flex-direction: column;min-width: 0;
     word-wrap: break-word;background-color: #fff;border: 1px solid #ccc;border-radius: .25rem;}
-
-@keyframes spinner { to {transform: rotate(360deg);}}
-.spinner:before { content: '';box-sizing: border-box;position: absolute;top: 50%;left: 50%;width: 20px;height: 20px;margin-top: -10px;
-    margin-left: -10px;border-radius: 50%;border: 2px solid #ccc;border-top-color: #333;animation: spinner .6s linear infinite;}
-.spinner {position: relative;width: 2em; height: 2em;margin: 0 0; font-size: 14px; text-indent: 999em;overflow: hidden; animation: spin 1s infinite steps(8);}
 
 .table > thead{background : #fff;}
 .nav.nav-tabs {margin-bottom: 0px}
