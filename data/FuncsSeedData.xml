@@ -46,7 +46,7 @@ along with this software (see the LICENSE.md file). If not, see
         <resourceValue><![CDATA[<p><a href="/vapps/ScreenTree">${ec.l10n.localize('Site Map')}</a></p>]]></resourceValue>
     </moqui.screen.ScreenThemeResource>
 
-    <moqui.screen.ScreenThemeResource screenThemeId="FUNCS_THEME" sequenceNum="130" resourceTypeEnumId="STRT_HEADER_NAVBAR_COMP" resourceValue="/ssstatic/MyAccountNav.js"/>
+    <!--<moqui.screen.ScreenThemeResource screenThemeId="FUNCS_THEME" sequenceNum="130" resourceTypeEnumId="STRT_HEADER_NAVBAR_COMP" resourceValue="/ssstatic/MyAccountNav.js"/>-->
 
     <moqui.screen.ScreenThemeResource screenThemeId="FUNCS_THEME" sequenceNum="999" resourceTypeEnumId="STRT_STYLESHEET" resourceValue="/funcsstatic/css/webroot-override.css"/>
 
