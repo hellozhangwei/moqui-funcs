@@ -2,7 +2,8 @@
 
 /* ========================== body, etc ========================== */
 
-html, body, #apps-root { height: 100%; }
+html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px; line-height:1.5; color:#515a6e; background: rgb(245, 247, 249); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; height: 100%; }
+
 /* body { padding-top: 51px; } /* this is the initial load setting, will get set dynamically for navbar-fixed-top */
 #top { height: 51px; }
 #top .navbar { margin-bottom: 0; border-radius: 0; }

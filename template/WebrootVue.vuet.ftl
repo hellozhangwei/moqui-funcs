@@ -1,17 +1,9 @@
 
 <style type="text/css">
 
-html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px;
-    line-height:1.5;
-    color:#515a6e;
-    background: rgb(245, 247, 249);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    height: 100%; }
-
   #apps-root { padding-left: 0px; padding-right: 0px; }
 
-  #top { height: auto; border:none; }
+  /*#top { height: auto; border:none; }*/
   #top .nav>li:not(:last-child)>a { border-right: 1px solid #ccc; border-color:#2e6da4 }
 
   @media (min-width: 768px) { #top .navbar { height: auto;}
