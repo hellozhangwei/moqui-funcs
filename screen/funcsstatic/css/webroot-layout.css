@@ -5,7 +5,8 @@
 html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px; line-height:1.5; color:#515a6e; background: rgb(245, 247, 249); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; height: 100%; }
 
 /* body { padding-top: 51px; } /* this is the initial load setting, will get set dynamically for navbar-fixed-top */
-#top { height: 51px; }
+#top { height: auto; border:none; }
+
 #top .navbar { margin-bottom: 0; border-radius: 0; }
 /* note that with fixed height for #top .navbar if overflow hidden drop-down menus don't show; would be nice to have some way for icons to disappear instead of wrapping below... */
 @media (min-width: 768px) { #top .navbar { height: 51px; overflow-y: visible; } .navbar-text { margin-left: 8px; } }

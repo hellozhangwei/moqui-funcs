@@ -3,7 +3,6 @@
 
   #apps-root { padding-left: 0px; padding-right: 0px; }
 
-  /*#top { height: auto; border:none; }*/
   #top .nav>li:not(:last-child)>a { border-right: 1px solid #ccc; border-color:#2e6da4 }
 
   @media (min-width: 768px) { #top .navbar { height: auto;}
