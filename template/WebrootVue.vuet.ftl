@@ -1,5 +1,14 @@
 
 <style type="text/css">
+
+html, body, #apps-root {font-family:"Helvetica Neue";font-size:12px;
+    line-height:1.5;
+    color:#515a6e;
+    background: rgb(245, 247, 249);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    height: 100%; }
+
   #apps-root { padding-left: 0px; padding-right: 0px; }
 
   #top { height: auto; border:none; }
@@ -8,6 +17,9 @@
   @media (min-width: 768px) { #top .navbar { height: auto;}
 
   #app-bar-divider { position: relative; width: 100%; min-width: 1130px; height: 8px; background-color: #2e6da4; }
+
+  body.dev #top nav {background: #2C3E50;}
+  body.production #top nav { background: #222222;}
 
   .navbar { border: none; }
 
@@ -77,7 +89,7 @@
                   <template v-if="(subscreenIndex+1)<=${moreSize}">
                     <m-link :href="subscreen.pathWithParams">
                       <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                      <img v-else :src="subscreen.image" :alt="subscreen.title" width="14">
+                      <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
                       {{subscreen.title}}</m-link>
                   </template>
                 </li>
@@ -91,7 +103,7 @@
                   <li v-for="(subscreen, subscreenIndex) in navMenuList[1].subscreens" :class="{active:subscreen.active}">
                     <template v-if="(subscreenIndex+1)>${moreSize}">
                       <m-link :href="subscreen.pathWithParams"><i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="14">
+                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">
                         {{subscreen.title}}</m-link>
                     </template>
                   </li>
@@ -107,7 +119,7 @@
                     <li class="active">
                       <m-link :href="subscreen.pathWithParams">
                         <i v-if="subscreen.imageType === 'icon'" :class="subscreen.image"></i>
-                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="14">{{subscreen.title}}</m-link>
+                        <img v-else :src="subscreen.image" :alt="subscreen.title" width="15">{{subscreen.title}}</m-link>
                     </li>
                   </template>
                 </template>
