@@ -22,6 +22,7 @@
   .navbar-nav>li>a>img{ display: block; padding-bottom: 10px; margin-left: 50%; width:13px}
   .dropdown-menu>li>a>img{width:13px;padding-right:5px}
   .dropdown-menu>li>a>i{padding-right:5px}
+  .dropdown-menu>li>a { line-height: 2.5; border-bottom: solid #ccc 1px; }
 
   /* Begin sub Menu section */
   #app-sub-navigation { #height: 48px; #border-bottom: solid 1px #000000; width: 100%; min-width: 1130px; }
@@ -99,7 +100,7 @@
                     </template>
                   </li>
 
-                  <li class="divider"></li>
+                  <!--<li class="divider"></li>-->
                 </ul>
               </li>
               </template>
