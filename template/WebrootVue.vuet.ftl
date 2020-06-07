@@ -119,7 +119,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="${sri.buildUrl("/Login/logout").url}" data-toggle="tooltip" title="${ec.l10n.localize("Logout")} ${(ec.user.userAccount.userFullName)!ec.user.userAccount.username}"
-                onclick="return confirm('${ec.l10n.localize("Logout")} ${(ec.user.userAccount.userFullName)!ec.user.userAccount.username}?')"  data-placement="bottom"><i class="glyphicon glyphicon-off"></i> 退出</a></li>
+                onclick="return confirm('${ec.l10n.localize("Logout")} ${(ec.user.userAccount.userFullName)!ec.user.userAccount.username}?')"  data-placement="bottom"><i class="glyphicon glyphicon-off"></i>${(ec.user.userAccount.userFullName)!ec.user.userAccount.username}</a></li>
             </ul>
           </div>
         </div>
