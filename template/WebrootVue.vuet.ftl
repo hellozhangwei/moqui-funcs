@@ -10,7 +10,7 @@
   #app-bar-divider { position: relative; width: 100%; min-width: 1130px; height: 8px; background-color: #2e6da4; }
 
   body.dev #top nav {background: #2C3E50;}
-  body.production #top nav { background: #222222;}
+  body.production #top nav { background: #2C3E50;}
 
   .navbar { border: none; }
 
