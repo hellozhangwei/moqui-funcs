@@ -4,10 +4,10 @@
 
     <screen-facade>
         <screen location="component://webroot/screen/webroot.xml" default-subscreen="funcs">
-            <subscreens-item name="funcs" menu-include="false" location="component://funcs/screen/funcs.xml"/>
+            <subscreens-item name="funcs" menu-include="false" location="component://moqui-funcs/screen/funcs.xml"/>
         </screen>
         <screen location="component://webroot/screen/webroot.xml">
-            <subscreens-item name="funcsstatic" menu-include="false" location="component://funcs/screen/funcsstatic.xml"/>
+            <subscreens-item name="funcsstatic" menu-include="false" location="component://moqui-funcs/screen/funcsstatic.xml"/>
         </screen>
     </screen-facade>
 

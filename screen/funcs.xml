@@ -63,7 +63,7 @@ along with this software (see the LICENSE.md file). If not, see
     ]]></script></pre-actions>
 
     <actions>
-        <set field="templateLocation" value="component://funcs/template/WebrootVue.vuet.ftl"/>
+        <set field="templateLocation" value="component://moqui-funcs/template/WebrootVue.vuet.ftl"/>
         <script>
             <![CDATA[
             def locationList = sri.getThemeValues("WEBROOT_VUE_LOCATION")
