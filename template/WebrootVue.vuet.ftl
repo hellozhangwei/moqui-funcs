@@ -17,9 +17,9 @@
   .navbar-inverse .navbar-nav>li>a {color: #fff; text-align: center; font-weight: 400;padding-top: 10px; padding-bottom: 10px; width:133px;}
   .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>.active>a:hover { background-color: #3498DB; }
   .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus { background-color: #2e6da4; }
-  .navbar-nav>li>a>i { display:block; text-align:center; padding-bottom: 10px; }
+  .navbar-nav>li>a>i { display:block; text-align:center; padding-bottom: 10px; font-size: 22px;}
 
-  .navbar-nav>li>a>img{ display: block; padding-bottom: 10px; margin-left: 50%; width:13px}
+  .navbar-nav>li>a>img{ display: block; padding-bottom: 10px; margin: auto; width:22px}
   .dropdown-menu>li>a>img{width:13px;padding-right:5px}
   .dropdown-menu>li>a>i{padding-right:5px}
   .dropdown-menu>li>a { line-height: 2.5; border-bottom: solid #ccc 1px; }
@@ -75,7 +75,7 @@
             <#assign headerTitleList = sri.getThemeValues("STRT_HEADER_TITLE")>
             <#if headerTitleList?has_content><div class="navbar-brand">${ec.resource.expand(headerTitleList?first, "")}</div></#if>
           </div>
-          <#assign moreSize=7>
+          <#assign moreSize=6>
           <div id="navbar-menu" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <template v-if="navMenuList[1]">
